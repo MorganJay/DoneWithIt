@@ -1,12 +1,59 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
+import {
+  StyleSheet,
+  Text,
+  View,
+  Button,
+  Alert,
+  TouchableWithoutFeedback,
+  TouchableOpacity,
+  TouchableHighlight,
+  TouchableNativeFeedback,
+  SafeAreaView,
+  Image,
+  Platform,
+  StatusBar as AndroidBar,
+  Dimensions
+} from 'react-native';
+import {
+  useDimensions,
+  useDeviceOrientation
+} from '@react-native-community/hooks';
+
+import Test from './components/Test';
 
 export default function App() {
+  const handlePress = () => {
+    console.log('Image pressed');
+  };
+
+  // console.log('====================================');
+  // const { landscape } = useDeviceOrientation();
+  // console.log('====================================');
+
+  const demoImage = require('./assets/favicon.png');
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View style={{ backgroundColor: 'white', flex: 1 }}>
+      <View
+        style={{
+          backgroundColor: 'dodgerblue',
+          flex: 2
+        }}
+      />
+      <View
+        style={{
+          backgroundColor: 'gold',
+          flex: 1
+        }}
+      />
+      <View
+        style={{
+          backgroundColor: 'tomato',
+          flex: 1
+        }}
+      />
     </View>
   );
 }
@@ -14,8 +61,12 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'white',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'space-around',
+    paddingTop: Platform.OS === 'android' ? AndroidBar.currentHeight : 0
   },
+  text: {
+    fontSize: 30
+  }
 });
