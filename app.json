@@ -11,9 +11,12 @@
       "backgroundColor": "#ffffff"
     },
     "updates": {
-      "fallbackToCacheTimeout": 0
+      "fallbackToCacheTimeout": 0,
+      "url": "https://u.expo.dev/06ed36c7-fbe8-4409-b3e4-04f0a28eef14"
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true
     },
@@ -26,6 +29,14 @@
     "web": {
       "favicon": ".app/assets/favicon.png"
     },
-    "description": "A marketplace for selling the stuff you don't need anymore."
+    "description": "A marketplace for selling the stuff you don't need anymore.",
+    "extra": {
+      "eas": {
+        "projectId": "06ed36c7-fbe8-4409-b3e4-04f0a28eef14"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    }
   }
 }
